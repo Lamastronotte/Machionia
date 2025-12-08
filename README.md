@@ -1,6 +1,9 @@
 # Machionia
 
 # How to build
-cmake -B build\n
-cmake --build build\n
+
+cmake -B build
+
+cmake --build build
+
 fetch makes the libraries easy
