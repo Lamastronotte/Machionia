@@ -20,9 +20,12 @@ if (NOT raylib_FOUND) # If there's none, fetch and build raylib
   endif()
 endif()
 
-file(GLOB_RECURSE SOURCES src/*.cpp)
-
-add_executable(main ${SOURCES})
+add_executable(main 
+  src/main.cpp
+  src/templates/entity.cpp
+  src/variables/config.cpp
+  src/variables/globals.cpp
+  )
 
 target_compile_features(main 
     PRIVATE 
