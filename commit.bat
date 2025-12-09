@@ -1,5 +1,5 @@
 git add .
-if "%1" == "" (
+if "%~1" == "" (
   git commit -m "commit by command"
 ) else (
   git commit -m %1
