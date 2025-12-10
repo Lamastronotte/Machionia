@@ -10,8 +10,7 @@
 
 #include "raylib.h"
 
-// #define RAYGUI_IMPLEMENTATION
-// #include "raygui.h"
+#include "raygui.h"
 
 #include <array>
 #include <vector>
@@ -24,5 +23,6 @@
 #include "entity.hpp"
 #include "globals.hpp"
 
-extern int screenWidth = 800;
-extern int screenHeight = 450;
+// definitions in config.cpp
+extern int screenWidth;
+extern int screenHeight;
