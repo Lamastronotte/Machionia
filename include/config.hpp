@@ -6,6 +6,7 @@
 #define NOMINMAX
 #define WIN32_LEAN_AND_MEAN
 #include "spdlog/spdlog.h"
+#include "spdlog/sinks/basic_file_sink.h"
 
 #include "raylib.h"
 
@@ -21,3 +22,7 @@
 
 #include "assets_loc.hpp"
 #include "entity.hpp"
+#include "globals.hpp"
+
+extern int screenWidth = 800;
+extern int screenHeight = 450;

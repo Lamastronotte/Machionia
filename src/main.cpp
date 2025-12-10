@@ -1,13 +1,5 @@
 #include "config.hpp"
 
-#include "globals.hpp"
-
-//----------------------------------------------------------------------------------
-// Global Variables Definition
-//----------------------------------------------------------------------------------
-int screenWidth = 800;
-int screenHeight = 450;
-
 //----------------------------------------------------------------------------------
 // Program main entry point
 //----------------------------------------------------------------------------------
@@ -23,15 +15,14 @@ int main()
   //--------------------------------------------------------------------------------------
 
   Entity myentity;
-  GlobalEntities global_entities;
 
-  global_entities.Register(&myentity);
+  Global_Entities.Register(&myentity);
 
   // Main game loop
   while (!WindowShouldClose()) // Detect window close button or ESC key
   {
     BeginDrawing();
-    global_entities.Draw();
+    Global_Entities.Draw();
     EndDrawing();
   }
 

@@ -3,6 +3,7 @@
 std::vector<std::filesystem::path> Textures_Names;
 std::vector<std::filesystem::path> Sounds_Names;
 
+
 void LoadFromFile(std::vector<std::filesystem::path> *input, std::string file)
 {
   namespace fs = std::filesystem;

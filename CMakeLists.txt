@@ -32,6 +32,7 @@ add_executable(main
   src/templates/entity.cpp
   src/variables/assets_loc.cpp
   src/variables/globals.cpp
+  src/variables/config.cpp
   )
 
 target_compile_features(main 

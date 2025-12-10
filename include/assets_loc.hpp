@@ -2,7 +2,6 @@
 
 #include "config.hpp"
 
-//
 extern std::vector<std::filesystem::path> Textures_Names;
 extern std::vector<std::filesystem::path> Sounds_Names;
 

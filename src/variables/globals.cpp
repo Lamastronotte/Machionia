@@ -1,15 +1,19 @@
 #include "globals.hpp"
 
+// variable definition
+GlobalAssets Global_Assets;
+GlobalEntities Global_Entities;
+
 Texture* GlobalAssets::GetTexture(std::string id)
 {
-
+  return &m_textures[id];
 }
 Sound* GlobalAssets::GetSound(std::string id)
 {
-
+  return &m_sounds[id];
 }
 
-GlobalAssets::GlobalAssets()
+void GlobalAssets::Load()
 {
   LoadFromFile(&Textures_Names, "./assets/textures");
   LoadFromFile(&Sounds_Names, "./assets/sfx");
