@@ -1,8 +1,12 @@
 #pragma once
+
 #include "config.hpp"
-#include "entity.hpp"
+
+// global variables here with extern but defined in globals.cpp
+
 
 // list of loaded assets, loaded entity
+
 
 // a list for sfx and textures
 class GlobalAssets
@@ -15,8 +19,7 @@ public:
   Texture* GetTexture(std::string id);
   Sound* GetSound(std::string id);
 
-  void LoadTextures(std::vector<std::string>* names);
-  void LoadSounds(std::vector<std::string> *names);
+  GlobalAssets();
 };
 
 class GlobalEntities

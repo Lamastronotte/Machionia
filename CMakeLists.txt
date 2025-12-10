@@ -20,10 +20,17 @@ if (NOT raylib_FOUND) # If there's none, fetch and build raylib
   endif()
 endif()
 
+FetchContent_Declare(
+  spdlog
+  GIT_REPOSITORY https://github.com/gabime/spdlog.git
+  GIT_TAG v1.16.0
+)
+FetchContent_MakeAvailable(spdlog)
+
 add_executable(main 
   src/main.cpp
   src/templates/entity.cpp
-  src/variables/config.cpp
+  src/variables/assets_loc.cpp
   src/variables/globals.cpp
   )
 
@@ -33,6 +40,8 @@ target_compile_features(main
 target_include_directories(main
     PRIVATE
     include)
-target_link_libraries(main 
-    PRIVATE
-    raylib)
+target_link_libraries(main
+  PRIVATE
+  raylib
+  spdlog::spdlog
+  )

@@ -3,9 +3,8 @@
 #include "config.hpp"
 
 //
-
-std::vector<std::string> Textures_Names;
-std::vector<std::string> Sounds_Names;
+extern std::vector<std::filesystem::path> Textures_Names;
+extern std::vector<std::filesystem::path> Sounds_Names;
 
 // reference to the array and to the file
-void LoadFromFile(std::vector<std::string>* input, std::string file);
+void LoadFromFile(std::vector<std::filesystem::path> *input, std::string file);

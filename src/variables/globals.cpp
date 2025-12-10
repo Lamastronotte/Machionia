@@ -1,5 +1,29 @@
-
 #include "globals.hpp"
+
+Texture* GlobalAssets::GetTexture(std::string id)
+{
+
+}
+Sound* GlobalAssets::GetSound(std::string id)
+{
+
+}
+
+GlobalAssets::GlobalAssets()
+{
+  LoadFromFile(&Textures_Names, "./assets/textures");
+  LoadFromFile(&Sounds_Names, "./assets/sfx");
+
+  for (auto &name : Textures_Names)
+  {
+    this->m_textures[name.filename().string()] = LoadTexture(name.string().c_str());
+  }
+
+  for (auto &name : Sounds_Names)
+  {
+    this->m_sounds[name.filename().string()] = LoadSound(name.string().c_str());
+  }
+}
 
 GlobalEntities* GlobalEntities::Register(Entity* _entity)
 {

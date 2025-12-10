@@ -13,25 +13,27 @@ int screenHeight = 450;
 //----------------------------------------------------------------------------------
 int main()
 {
-    // Initialization
-    //--------------------------------------------------------------------------------------
-    InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
+  spdlog::info("Welcome to spdlog!");
 
-    SetTargetFPS(60);   // Set our game to run at 60 frames-per-second
-    //--------------------------------------------------------------------------------------
+  // Initialization
+  //--------------------------------------------------------------------------------------
+  InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
 
-    Entity myentity;
-    GlobalEntities global_entities;
+  SetTargetFPS(60); // Set our game to run at 60 frames-per-second
+  //--------------------------------------------------------------------------------------
 
-    global_entities.Register(&myentity);
+  Entity myentity;
+  GlobalEntities global_entities;
 
-    // Main game loop
-    while (!WindowShouldClose())    // Detect window close button or ESC key
-    {
-        BeginDrawing();
-        global_entities.Draw();
-        EndDrawing();
-    }
+  global_entities.Register(&myentity);
+
+  // Main game loop
+  while (!WindowShouldClose()) // Detect window close button or ESC key
+  {
+    BeginDrawing();
+    global_entities.Draw();
+    EndDrawing();
+  }
 
     // De-Initialization
     //--------------------------------------------------------------------------------------
