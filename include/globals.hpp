@@ -4,9 +4,19 @@
 
 // list of loaded assets, loaded entity
 
+// a list for sfx and textures
 class GlobalAssets
 {
+private:
+  std::map<std::string, Texture> m_textures;
+  std::map<std::string, Sound> m_sounds;
+public:
 
+  Texture* GetTexture(std::string id);
+  Sound* GetSound(std::string id);
+
+  void LoadTextures(std::vector<std::string>* names);
+  void LoadSounds(std::vector<std::string> *names);
 };
 
 class GlobalEntities
@@ -21,6 +31,7 @@ public:
   GlobalEntities* Register(Entity* _entity);
 
   void Draw();
+  void Update();
 
 private:
   std::vector<Entity*> m_entities;

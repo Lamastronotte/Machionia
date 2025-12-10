@@ -15,3 +15,12 @@ void GlobalEntities::Draw()
     e->Draw();
   }
 }
+
+void GlobalEntities::Update()
+{
+  float Delta_Time = GetFrameTime();
+  for (auto &e : m_entities)
+  {
+    e->Update(Delta_Time);
+  }
+}
