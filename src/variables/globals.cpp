@@ -20,12 +20,12 @@ void GlobalAssets::Load()
 
   for (auto &name : Textures_Names)
   {
-    this->m_textures[name.filename().string()] = LoadTexture(name.string().c_str());
+    this->m_textures[name.stem().string()] = LoadTexture(name.string().c_str());
   }
 
   for (auto &name : Sounds_Names)
   {
-    this->m_sounds[name.filename().string()] = LoadSound(name.string().c_str());
+    this->m_sounds[name.stem().string()] = LoadSound(name.string().c_str());
   }
 }
 

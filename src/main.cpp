@@ -14,6 +14,8 @@ int main()
   SetTargetFPS(60); // Set our game to run at 60 frames-per-second
   //--------------------------------------------------------------------------------------
 
+  Global_Assets.Load();
+
   Entity myentity;
 
   Global_Entities.Register(&myentity);
