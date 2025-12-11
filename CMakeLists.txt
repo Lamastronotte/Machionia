@@ -33,6 +33,7 @@ add_executable(main
   src/variables/assets_loc.cpp
   src/variables/globals.cpp
   src/variables/config.cpp
+  src/map/map.cpp
   )
 
 target_compile_features(main 

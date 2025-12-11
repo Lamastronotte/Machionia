@@ -9,8 +9,8 @@
 #include "spdlog/sinks/basic_file_sink.h"
 
 #include "raylib.h"
-
 #include "raygui.h"
+#include "rlgl.h"
 
 #include <array>
 #include <vector>

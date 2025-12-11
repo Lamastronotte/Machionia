@@ -2,7 +2,7 @@
 
 // variable definition
 GlobalAssets Global_Assets;
-GlobalEntities Global_Entities;
+
 
 Texture* GlobalAssets::GetTexture(std::string id)
 {
@@ -29,7 +29,11 @@ void GlobalAssets::Load()
   }
 }
 
-GlobalEntities* GlobalEntities::Register(Entity* _entity)
+namespace Entity
+{
+  GlobalEntities Global_Entities;
+
+  GlobalEntities* GlobalEntities::Register(Entity* _entity)
 {
   m_entities.push_back(_entity);
   _entity->OnRegister(&m_entities);
@@ -52,3 +56,4 @@ void GlobalEntities::Update()
     e->Update(Delta_Time);
   }
 }
+};

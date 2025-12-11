@@ -10,6 +10,7 @@ on 10th december if you got time implement :
 # on 11th to 12th december (thursday to friday) :
 
 - do tile map with some collision
+- DO ONLY TILEMAP FIX THIS THING
 
 - try to do raycast 2d with some entities and tilemap collisions
 

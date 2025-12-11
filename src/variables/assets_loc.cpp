@@ -11,7 +11,6 @@ void LoadFromFile(std::vector<std::filesystem::path> *input, std::string file)
   {
     if (fs::is_regular_file(entry))
     {
-      // Calcule le chemin relatif par rapport au dossier de base
       fs::path relative_path = fs::relative(entry.path(), ".");
       spdlog::info("{}", relative_path.string());
       input->push_back(relative_path);
