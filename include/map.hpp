@@ -8,7 +8,7 @@ namespace Entity
   {
     Rectangle m_texture_pos;
     Vector2 m_pos;
-    bool has_collision
+    bool has_collision;
   };
 
   /*

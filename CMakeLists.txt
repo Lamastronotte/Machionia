@@ -27,6 +27,14 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(spdlog)
 
+# FetchContent_Declare(
+#     enet
+#     GIT_REPOSITORY https://github.com/lsalzman/enet.git
+#     GIT_TAG master
+# )
+
+# FetchContent_MakeAvailable(enet)
+
 add_executable(main 
   src/main.cpp
   src/templates/entity.cpp
@@ -46,4 +54,5 @@ target_link_libraries(main
   PRIVATE
   raylib
   spdlog::spdlog
+  # enet
   )
