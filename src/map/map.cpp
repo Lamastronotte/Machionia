@@ -29,47 +29,15 @@ namespace Entity
 
   void Map::Draw()
   {
-    unsigned short indices[] = {
-        0, 1, 3,  // first Triangle
-        1, 2, 3   // second Triangle
-    };
 
-    rlEnableShader(map_shader_id);
-        rlEnableVertexArray(VAO);
-            // rlDrawVertexArray(0, 3);
-            rlDrawVertexArrayElements(0, 6, indices);
-        rlDisableVertexArray();
-    rlDisableShader();
   }
   void Map::Update()
   {
 
   }
-  void Map::LoadMap(std::string data, int tile_size, int map_size)
+  void Map::LoadMap(std::string data, std::string texture, int tile_size, int map_size)
   {
-    float vertices[] = {
-         0.5f,  0.5f, 0.0f,  // top right
-         0.5f, -0.5f, 0.0f,  // bottom right
-        -0.5f, -0.5f, 0.0f,  // bottom left
-        -0.5f,  0.5f, 0.0f   // top left 
-    };
 
-    unsigned short indices[] = {
-        0, 1, 3,  // first Triangle
-        1, 2, 3   // second Triangle
-    };  
-
-    VAO = rlLoadVertexArray();
-    rlEnableVertexArray(VAO);
-
-    VBO = rlLoadVertexBuffer(vertices, sizeof(vertices), false);
-    EBO = rlLoadVertexBufferElement(indices, sizeof(indices), false);
-
-    rlSetVertexAttribute(0, 3, RL_FLOAT, 0, 3 * sizeof(float), 0);
-    rlEnableVertexAttribute(0);
-
-    rlDisableVertexBuffer();
-    rlDisableVertexArray();
   }
 
 };
