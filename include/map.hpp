@@ -27,6 +27,9 @@ namespace Entity
     void LoadMap(std::string data, std::string texture, int tile_size, int map_size);
   private:
     std::vector<Cell> m_cells;
+    std::string m_texture;
+    int m_tile_size;
+    int m_map_size;
   };
 };
 

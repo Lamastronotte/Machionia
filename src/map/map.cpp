@@ -7,29 +7,38 @@
 namespace Entity
 {
   /*
-  use of vertex array for performances
+  TODO use of vertex array for performances
 
   */
 
-  char *map_vertex_src = "#version 330 core\n"
-  "layout (location = 0) in vec3 aPos;\n"
-  "void main()\n"
-  "{\n"
-  "   gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n"
-  "}\0";
+  /*
+    struct Cell
+  {
+    Rectangle m_texture_pos;
+    Vector2 m_pos;
+    bool has_collision;
+  };
 
-  char *map_frag_src = "#version 330 core\n"
-  "out vec4 FragColor;\n"
-  "void main()\n"
-  "{\n"
-  "   FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
-  "}\n\0";
+  /*
 
-  unsigned int map_shader_id;
+  class Map: public Entity
+  {
+  public:
+    virtual void Draw();
+    virtual void Update();
+    void LoadMap(std::string data, std::string texture, int tile_size, int map_size);
+  private:
+    std::vector<Cell> m_cells;
+    std::string m_texture;
+  };*/
 
   void Map::Draw()
   {
-
+    Texture* texture = Global_Assets.GetTexture(m_texture);
+    for(auto& cell : m_cells)
+    {
+      DrawTextureRec(*texture, cell.m_pos, cell.m_pos, WHITE);
+    }
   }
   void Map::Update()
   {
@@ -37,7 +46,7 @@ namespace Entity
   }
   void Map::LoadMap(std::string data, std::string texture, int tile_size, int map_size)
   {
-
+    
   }
 
 };
