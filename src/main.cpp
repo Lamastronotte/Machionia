@@ -9,7 +9,7 @@
 //----------------------------------------------------------------------------------
 int main()
 {
-  spdlog::info("Welcome to spdlog!");
+  // spdlog::info("Welcome to spdlog!");
 
   // Initialization
   //--------------------------------------------------------------------------------------
@@ -20,9 +20,9 @@ int main()
 
   Global_Assets.Load();
 
-  Entity::Map mymap;
-  mymap.LoadMap("", "", 0, 0);
-  Entity::Global_Entities.Register(&mymap);
+  Entity::Map myentity;
+  myentity.LoadMap("", "fodder", 500, 1);
+  Entity::Global_Entities.Register(&myentity);
 
   // Main game loop
   while (!WindowShouldClose()) // Detect window close button or ESC key

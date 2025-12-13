@@ -34,10 +34,16 @@ namespace Entity
 
   void Map::Draw()
   {
+    
     Texture* texture = Global_Assets.GetTexture(m_texture);
     for(auto& cell : m_cells)
     {
-      DrawTextureRec(*texture, cell.m_pos, cell.m_pos, WHITE);
+      // DrawTexturePro(*texture, {0, 0, 100, 100}, {0, 0, 100, 100}, {50, 50}, 0, WHITE);
+      // void DrawTexturePro(Texture2D texture, Rectangle source, Rectangle dest, Vector2 origin, float rotation, Color tint);oid DrawTexturePro(Texture2D texture, Rectangle source, Rectangle dest, Vector2 origin, float rotation, Color tint);
+      //void DrawTextureRec(Texture2D texture, Rectangle source, Vector2 position, Color tint);   
+      // DrawTexturePro(*texture, {0, 0, 100, 100}, {0, 0, 100, 100}, {50, 50}, 0, WHITE);
+      // DrawTextureRec(*texture, cell.m_texture_pos, cell.m_pos, WHITE);   
+      DrawTexturePro(*texture, cell.m_texture_pos, {cell.m_pos.x, cell.m_pos.y, (float)m_tile_size, (float)m_tile_size}, {(float)m_tile_size / 2, (float)m_tile_size / 2}, 0, WHITE);
     }
   }
   void Map::Update()
@@ -46,7 +52,11 @@ namespace Entity
   }
   void Map::LoadMap(std::string data, std::string texture, int tile_size, int map_size)
   {
+    m_texture = texture;
+    m_tile_size = tile_size;
+    m_map_size = map_size;
     
+    m_cells.push_back({{0, 0, 100, 100}, {0, 0}, false});
   }
 
 };

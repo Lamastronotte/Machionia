@@ -22,8 +22,8 @@ namespace Entity
   class Map: public Entity
   {
   public:
-    virtual void Draw();
-    virtual void Update();
+    void Draw();
+    void Update();
     void LoadMap(std::string data, std::string texture, int tile_size, int map_size);
   private:
     std::vector<Cell> m_cells;
