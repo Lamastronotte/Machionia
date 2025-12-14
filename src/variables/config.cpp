@@ -5,5 +5,5 @@
 // needed to activate raygui
 #define RAYGUI_IMPLEMENTATION
 
-int screenWidth = 800;
-int screenHeight = 450;
+int screenWidth = 1920;
+int screenHeight = 1080;

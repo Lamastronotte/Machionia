@@ -18,8 +18,10 @@ on 10th december if you got time implement :
 
 - finish tilemaps done
 
+# 15th to 18th
 - implement some ui inspired by starcraft :
-- move camera with mouse
+
 - big bottom pannel with buttons
 - mini map ?
-- start textures
+- start texture
+- move camera with mousedrag dont focus on this

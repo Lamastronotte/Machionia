@@ -7,3 +7,4 @@ added a big issue
 added minor stuff to tilemap
 # 14th december
 done tilemap
+added some camerea
