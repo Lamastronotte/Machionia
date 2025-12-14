@@ -29,7 +29,7 @@ namespace Entity
     std::vector<Cell> m_cells;
     std::string m_texture;
     int m_tile_size;
-    int m_map_size;
+    int m_map_size; // 
   };
 };
 

@@ -3,6 +3,7 @@
 
 // specific entities
 #include "map.hpp"
+#include "Camera.hpp"
 
 //----------------------------------------------------------------------------------
 // Program main entry point
@@ -16,7 +17,13 @@ int main()
   InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
 
   SetTargetFPS(60); // Set our game to run at 60 frames-per-second
-  //--------------------------------------------------------------------------------------
+  
+  Camera2D default_camera = {0};
+  default_camera.target = {0, 0};
+  default_camera.offset = {0, 0};//{(float)screenWidth / 2.f, (float)screenHeight / 2.f};
+  default_camera.rotation = 0.f;
+  default_camera.zoom = 1.0f;
+  Global_Camera = &default_camera;
 
   Global_Assets.Load();
 
@@ -31,14 +38,16 @@ int main()
   };
 
   myentity.LoadMap(map_data, "map_debug", 100, 5);
-  Entity::Global_Entities.Register(&myentity);
 
-  Camera2D default_camera = {0};
-  Global_Camera = &default_camera;
+  Entity::Camera mycamera;
+
+  Entity::Global_Entities.Register(&myentity)->Register(&mycamera);
 
   // Main game loop
   while (!WindowShouldClose()) // Detect window close button or ESC key
   {
+    Entity::Global_Entities.Update();
+
     BeginDrawing();
       BeginMode2D(*Global_Camera);
         Entity::Global_Entities.Draw();

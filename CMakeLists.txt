@@ -42,6 +42,7 @@ add_executable(main
   src/variables/globals.cpp
   src/variables/config.cpp
   src/map/map.cpp
+  src/player/camera.cpp
   )
 
 target_compile_features(main 

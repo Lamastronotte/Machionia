@@ -3,7 +3,7 @@
 // variable definition
 GlobalAssets Global_Assets;
 
-Camera2D Global_Camera;
+Camera2D* Global_Camera;
 
 Texture* GlobalAssets::GetTexture(std::string id)
 {
@@ -43,6 +43,8 @@ namespace Entity
 
 void GlobalEntities::Draw()
 {
+  ClearBackground(BLACK);
+
   for (auto& e : m_entities)
   {
     e->Draw();

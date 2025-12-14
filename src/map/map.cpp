@@ -61,7 +61,7 @@ namespace Entity
       for(int y = 0; y < m_map_size; y++)
       {
         int id = x + y * m_map_size;
-        spdlog::info("{}", id);
+        // spdlog::info("{}", id);
         m_cells.push_back({{(float)data[id] * (float)100 + 1, (float)0, (float)100, (float)100}, {(float)x * (float)m_tile_size, (float)y * (float)m_tile_size}});
       }
     }
