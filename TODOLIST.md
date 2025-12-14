@@ -16,7 +16,7 @@ on 10th december if you got time implement :
 
 # on 13th to 14th (weekend)
 
-- finish tilemaps
+- finish tilemaps done
 
 - implement some ui inspired by starcraft :
 - move camera with mouse

@@ -23,10 +23,14 @@ int main()
   Entity::Map myentity;
 
   int map_data[] = {
-    1, 1, 1, 1
+    1, 0, 1, 2, 1,
+    0, 1, 2, 1, 0,
+    1, 2, 1, 0, 1,
+    2, 1, 0, 1, 2,
+    1, 0, 1, 2, 1
   };
 
-  myentity.LoadMap(map_data, "map_debug", 100, 2);
+  myentity.LoadMap(map_data, "map_debug", 100, 5);
   Entity::Global_Entities.Register(&myentity);
 
   // Main game loop
