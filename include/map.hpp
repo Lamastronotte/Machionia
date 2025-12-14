@@ -8,7 +8,7 @@ namespace Entity
   {
     Rectangle m_texture_pos;
     Vector2 m_pos;
-    bool has_collision;
+    // bool has_collision;
   };
 
   /*
@@ -24,7 +24,7 @@ namespace Entity
   public:
     void Draw();
     void Update();
-    void LoadMap(std::string data, std::string texture, int tile_size, int map_size);
+    void LoadMap(int* data, std::string texture, int tile_size, int map_size);
   private:
     std::vector<Cell> m_cells;
     std::string m_texture;

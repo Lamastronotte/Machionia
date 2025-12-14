@@ -21,7 +21,12 @@ int main()
   Global_Assets.Load();
 
   Entity::Map myentity;
-  myentity.LoadMap("", "fodder", 500, 1);
+
+  int map_data[] = {
+    1, 1, 1, 1
+  };
+
+  myentity.LoadMap(map_data, "map_debug", 100, 2);
   Entity::Global_Entities.Register(&myentity);
 
   // Main game loop

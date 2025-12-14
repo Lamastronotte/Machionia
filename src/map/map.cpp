@@ -43,20 +43,29 @@ namespace Entity
       //void DrawTextureRec(Texture2D texture, Rectangle source, Vector2 position, Color tint);   
       // DrawTexturePro(*texture, {0, 0, 100, 100}, {0, 0, 100, 100}, {50, 50}, 0, WHITE);
       // DrawTextureRec(*texture, cell.m_texture_pos, cell.m_pos, WHITE);   
-      DrawTexturePro(*texture, cell.m_texture_pos, {cell.m_pos.x, cell.m_pos.y, (float)m_tile_size, (float)m_tile_size}, {(float)m_tile_size / 2, (float)m_tile_size / 2}, 0, WHITE);
+      DrawTexturePro(*texture, cell.m_texture_pos, {cell.m_pos.x, cell.m_pos.y, (float)m_tile_size, (float)m_tile_size}, {0.f, 0.f}, 0, WHITE);
     }
   }
   void Map::Update()
   {
 
   }
-  void Map::LoadMap(std::string data, std::string texture, int tile_size, int map_size)
+  void Map::LoadMap(int* data, std::string texture, int tile_size, int map_size)
   {
     m_texture = texture;
     m_tile_size = tile_size;
     m_map_size = map_size;
     
-    m_cells.push_back({{0, 0, 100, 100}, {0, 0}, false});
+    for(int x = 0; x < m_map_size; x++)
+    {
+      for(int y = 0; y < m_map_size; y++)
+      {
+        int id = x + y * m_map_size;
+        spdlog::info("{}", id);
+        m_cells.push_back({{(float)data[id] * (float)100, (float)0, (float)100, (float)100}, {(float)x * (float)m_tile_size, (float)y * (float)m_tile_size}});
+      }
+    }
+    // m_cells.push_back({{0, 0, 100, 100}, {0, 0}});
   }
 
 };
