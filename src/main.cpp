@@ -33,11 +33,16 @@ int main()
   myentity.LoadMap(map_data, "map_debug", 100, 5);
   Entity::Global_Entities.Register(&myentity);
 
+  Camera2D default_camera = {0};
+  Global_Camera = &default_camera;
+
   // Main game loop
   while (!WindowShouldClose()) // Detect window close button or ESC key
   {
     BeginDrawing();
-    Entity::Global_Entities.Draw();
+      BeginMode2D(*Global_Camera);
+        Entity::Global_Entities.Draw();
+      EndMode2D();
     EndDrawing();
   }
 

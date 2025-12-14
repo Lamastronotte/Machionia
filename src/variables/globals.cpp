@@ -3,6 +3,7 @@
 // variable definition
 GlobalAssets Global_Assets;
 
+Camera2D Global_Camera;
 
 Texture* GlobalAssets::GetTexture(std::string id)
 {

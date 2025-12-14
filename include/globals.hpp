@@ -9,6 +9,8 @@ class GlobalAssets;
 
 extern GlobalAssets Global_Assets;
 
+extern Camera2D* Global_Camera;
+
 // list of loaded assets, loaded entity
 
 
