@@ -4,6 +4,7 @@
 // specific entities
 #include "map.hpp"
 #include "Camera.hpp"
+#include "ui.hpp"
 
 //----------------------------------------------------------------------------------
 // Program main entry point
