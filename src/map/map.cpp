@@ -68,4 +68,5 @@ namespace Entity
     // m_cells.push_back({{0, 0, 100, 100}, {0, 0}});
   }
 
+  Type Map::GetType() {return eMAP;}
 };

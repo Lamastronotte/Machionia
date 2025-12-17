@@ -3,7 +3,6 @@
 
 namespace Entity
 {
-
   enum Type
   {
     eNIL,

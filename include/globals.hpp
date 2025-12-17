@@ -58,6 +58,7 @@ namespace Entity
     GlobalEntities* Register(Entity* _entity);
 
     void Draw();
+    void DrawUI();
     void Update();
 
   private:

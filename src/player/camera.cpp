@@ -77,4 +77,6 @@ namespace Entity
     m_camera.rotation = 0.f;
     m_camera.zoom = 0.75f;
   }
+
+  Type Camera::GetType() {return eCAM;}
 };

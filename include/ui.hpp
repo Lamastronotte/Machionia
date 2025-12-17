@@ -1,12 +1,12 @@
 #pragma once
 
 #include "config.hpp"
-namespace Ui
+namespace Entity
 {
   /*
   big class to handle smaller ui
   */
-  class UIManager: public Entity::Entity
+  class UIManager: public Entity
   {
   public:
     UIManager();
@@ -14,6 +14,7 @@ namespace Ui
     void Draw();
     void Update(float dt);
     void OnRegister(std::vector<Entity*> *_entities_list);
+    Type GetType();
   };
 };
 

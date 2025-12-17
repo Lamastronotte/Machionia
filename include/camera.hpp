@@ -15,6 +15,7 @@ namespace Entity
   public:
     void Update(float dt);
     void OnRegister(std::vector<Entity*> *_entities_list);
+    Type GetType();
   private:
     Camera2D m_camera;
   };

@@ -49,6 +49,16 @@ void GlobalEntities::Draw()
 
   for (auto& e : m_entities)
   {
+    if(e->GetType() != Type::eUI)
+    e->Draw();
+  }
+}
+
+void GlobalEntities::DrawUI()
+{
+  for (auto& e : m_entities)
+  {
+    if(e->GetType() == Type::eUI)
     e->Draw();
   }
 }

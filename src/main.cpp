@@ -44,7 +44,9 @@ int main()
 
   Entity::Camera mycamera;
 
-  Entity::Global_Entities.Register(&myentity)->Register(&mycamera);
+  Entity::UIManager myui;
+
+  Entity::Global_Entities.Register(&myentity)->Register(&mycamera)->Register(&myui);
 
   // Main game loop
   while (!WindowShouldClose()) // Detect window close button or ESC key
@@ -55,6 +57,8 @@ int main()
       BeginMode2D(*Global_Camera);
         Entity::Global_Entities.Draw();
       EndMode2D();
+
+      Entity::Global_Entities.DrawUI();
     EndDrawing();
   }
 

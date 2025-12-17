@@ -25,6 +25,7 @@ namespace Entity
     void Draw();
     void Update();
     void LoadMap(int* data, std::string texture, int tile_size, int map_size);
+    Type GetType();
   private:
     std::vector<Cell> m_cells;
     std::string m_texture;
