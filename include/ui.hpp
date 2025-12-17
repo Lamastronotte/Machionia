@@ -1,15 +1,20 @@
 #pragma once
 
 #include "config.hpp"
-
-// define drawable objects and link
 namespace Ui
 {
-  // update and drawable part
-class UI: public Entity::Entity
-{
+  /*
+  big class to handle smaller ui
+  */
+  class UIManager: public Entity::Entity
+  {
+  public:
+    UIManager();
 
-};
+    void Draw();
+    void Update(float dt);
+    void OnRegister(std::vector<Entity*> *_entities_list);
+  };
 };
 
 
