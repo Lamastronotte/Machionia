@@ -13,6 +13,7 @@ extern Camera2D* Global_Camera;
 
 // amount of pixels needed for the ca
 extern float needed_camera_move;
+extern float camera_speed;
 
 // list of loaded assets, loaded entity
 

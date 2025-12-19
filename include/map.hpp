@@ -1,5 +1,6 @@
 #pragma once
 #include "config.hpp"
+#include "collider.hpp"
 
 namespace Entity
 {
@@ -19,9 +20,10 @@ namespace Entity
   in a tilemap
   for now use of void DrawTextureRec(Texture2D texture, Rectangle source, Vector2 position, Color tint); for drawing
   */
-  class Map: public Entity
+  class Map: public CCollider
   {
   public:
+    Map();
     void Draw();
     void Update();
     void LoadMap(int* data, std::string texture, int tile_size, int map_size);

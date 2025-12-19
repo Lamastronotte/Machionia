@@ -38,6 +38,8 @@ FetchContent_MakeAvailable(spdlog)
 add_executable(main 
   src/main.cpp
   src/templates/entity.cpp
+  src/templates/collider.cpp
+  src/templates/troop.cpp
   src/variables/assets_loc.cpp
   src/variables/globals.cpp
   src/variables/config.cpp

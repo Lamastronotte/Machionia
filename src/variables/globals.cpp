@@ -5,7 +5,8 @@ GlobalAssets Global_Assets;
 
 Camera2D* Global_Camera;
 
-float needed_camera_move = 20/100;
+float needed_camera_move = 50.f;
+float camera_speed = 450.f;
 
 Texture* GlobalAssets::GetTexture(std::string id)
 {

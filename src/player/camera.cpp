@@ -15,22 +15,22 @@ namespace Entity
 
     Vector2 dir = {0, 0};
 
-    if(mouse_pos.x <= screenWidth * needed_camera_move)
+    if(mouse_pos.x <= needed_camera_move)
     {
       dir.x -= 1;
     }
 
-    if(mouse_pos.x >= screenWidth - (screenWidth * needed_camera_move))
+    if(mouse_pos.x >= screenWidth - (needed_camera_move))
     {
       dir.x += 1;
     }
     
-    if(mouse_pos.y <= screenHeight * needed_camera_move)
+    if(mouse_pos.y <= needed_camera_move)
     {
      dir.y -= 1;
     }
 
-    if(mouse_pos.y >= screenHeight - (screenHeight * needed_camera_move))
+    if(mouse_pos.y >= screenHeight - (needed_camera_move))
     {
       dir.y += 1;
     }
@@ -62,8 +62,8 @@ namespace Entity
       length = 1;
     }
 
-    dir.x = dir.x * 200.f * dt * (1/m_camera.zoom) / length + m_camera.target.x;
-    dir.y = dir.y * 200.f * dt * (1/m_camera.zoom) / length + m_camera.target.y;
+    dir.x = dir.x * camera_speed * dt * (1/m_camera.zoom) / length + m_camera.target.x;
+    dir.y = dir.y * camera_speed * dt * (1/m_camera.zoom) / length + m_camera.target.y;
     m_camera.target = dir;
     
   }
