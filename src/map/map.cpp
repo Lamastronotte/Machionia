@@ -34,7 +34,7 @@ namespace Entity
 
   Map::Map()
   {
-    m_collider.m_pos = {0.0f, 0.0f};
+    m_pos = {0.0f, 0.0f};
   }
 
   void Map::Draw()
@@ -56,8 +56,7 @@ namespace Entity
   }
   void Map::LoadMap(int* data, std::string texture, int tile_size, int map_size)
   {
-    m_collider.m_size = {(float)tile_size * (float)map_size, (float)tile_size * (float)map_size};
-    CalculateRectangle();
+    m_size = {(float)tile_size * (float)map_size, (float)tile_size * (float)map_size};
     m_texture = texture;
     m_tile_size = tile_size;
     m_map_size = map_size;

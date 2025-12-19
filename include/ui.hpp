@@ -1,7 +1,7 @@
 #pragma once
 
 #include "config.hpp"
-#include "collider.hpp
+#include "map.hpp"
 
 namespace Entity
 {

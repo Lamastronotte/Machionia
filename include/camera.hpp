@@ -13,6 +13,7 @@ namespace Entity
   class Camera: public Entity
   {
   public:
+    Camera();
     void Update(float dt);
     void OnRegister(std::vector<Entity*> *_entities_list);
     Type GetType();

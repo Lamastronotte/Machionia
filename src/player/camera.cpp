@@ -68,7 +68,7 @@ namespace Entity
     
   }
 
-  void Camera::OnRegister(std::vector<Entity*> *_entities_list)
+  Camera::Camera()
   {
     Global_Camera = &m_camera;
 
@@ -76,6 +76,14 @@ namespace Entity
     m_camera.offset = {0, 0};//{(float)screenWidth / 2.f, (float)screenHeight / 2.f};
     m_camera.rotation = 0.f;
     m_camera.zoom = 0.75f;
+
+    // m_pos = {60, 60};
+    // m_size = {90, 90};
+  }
+
+  void Camera::OnRegister(std::vector<Entity*> *_entities_list)
+  {
+    
   }
 
   Type Camera::GetType() {return eCAM;}

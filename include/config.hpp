@@ -6,8 +6,8 @@
 #define NOMINMAX
 #define WIN32_LEAN_AND_MEAN
 
-// #include "spdlog/spdlog.h"
-// #include "spdlog/sinks/basic_file_sink.h"
+#include "spdlog/spdlog.h"
+#include "spdlog/sinks/basic_file_sink.h"
 
 #include "raylib.h"
 #include "rlgl.h"
@@ -24,6 +24,7 @@
 #include "assets_loc.hpp"
 #include "entity.hpp"
 #include "globals.hpp"
+#include "collider.hpp"
 
 // definitions in config.cpp
 extern int screenWidth;

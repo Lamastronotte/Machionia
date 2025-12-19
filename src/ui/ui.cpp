@@ -3,6 +3,8 @@
 #define RAYGUI_IMPLEMENTATION
 #include "raygui.h"
 
+
+
 namespace Entity
 {
 
@@ -18,13 +20,25 @@ namespace Entity
 
     if(IsMouseButtonPressed(0))
     {
+      Vector2 mouseWorld = GetScreenToWorld2D(GetMousePosition(), *Global_Camera);
+
       for(auto e: *m_entity_list)
       {
-        if(e->GetType() == eMAP)
+        auto entity_cast = dynamic_cast<Collider*>(e);
+
+        if(entity_cast != nullptr)
         {
-          // spdlog::info("Found map");
-          // you know it's extended by collider class
-          // if(((CCollider*)e).GetCollision();)
+
+          auto rec = entity_cast->GetRectangle();
+          
+          if(CheckCollisionPointRec(mouseWorld, rec))
+          {
+            spdlog::info("hit entity");
+          }
+          else
+          {
+            spdlog::info("missed entity");
+          }
         }
       }
     }
