@@ -3,8 +3,9 @@
 
 namespace Entity
 {
-  class Troop: public Entity
+  class Troop: public Entity, public Collider
   {
+    public:
 
   };
 };
