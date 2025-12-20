@@ -1,9 +1,18 @@
 # Machionia
 
 Video game made with raylib
+
 Tower defense genre
 
-new change
+Inspired by starcraft gane Mine and Magic
+
+place troops to defend waves of ennemis
+
+gather ressources on the map 
+
+get an economy
+
+multiplayer with troop send and an army battle at the end
 
 # How to build
 
@@ -16,6 +25,8 @@ fetch makes the libraries easy
 # Important files
 
 [TODOLIST.md](https://github.com/Lamastronotte/Machionia/blob/main/TODOLIST.md)
+
+[changelog.md](https://github.com/Lamastronotte/Machionia/blob/main/changelog.md)
 
 # Libraries
 

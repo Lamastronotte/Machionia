@@ -44,6 +44,7 @@ add_executable(main
   src/variables/globals.cpp
   src/variables/config.cpp
   src/map/map.cpp
+  src/map/ressourcenode.cpp
   src/player/camera.cpp
   src/ui/ui.cpp
   )

@@ -57,7 +57,7 @@ namespace Entity
     Adds an entity to the array and call, pass the array to the entity and uses a callback from entity
     */
     GlobalEntities* Register(Entity* _entity);
-
+    
     void Draw();
     void DrawUI();
     void Update();
