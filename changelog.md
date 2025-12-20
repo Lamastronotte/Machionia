@@ -8,3 +8,5 @@ added minor stuff to tilemap
 # 14th december
 done tilemap
 added some camerea
+
+# 20th december

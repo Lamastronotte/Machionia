@@ -27,6 +27,8 @@ namespace Entity
     // if ismouse, the coords are transformed from screen pos
     Entity* GetEntity(Vector2 pos, bool ismouse);
     std::vector<Entity*> *m_entity_list;
+
+    void ShowEntityDetail();
   };
 };
 
