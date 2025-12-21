@@ -39,3 +39,7 @@ https://github.com/gabime/spdlog
 stl for general stuff
 https://fr.wikipedia.org/wiki/Standard_Template_Library
 
+
+# WARNING
+
+They may are some issues with building because I switched to visual studio with vcpkg, if some libraries are missing, add them to the cmake file and add the source to cmake, prob gonna do this later
