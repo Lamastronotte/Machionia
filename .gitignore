@@ -4,8 +4,12 @@ out
 .idea
 .vs
 .vscode
+<<<<<<< HEAD
 logs
 x64
 Project1.vcxproj
 Project1.vcxproj.filters
 Project1.vcxproj.user
+=======
+logs
+>>>>>>> 84eabab4631653ac751af224845619a3c44157b2

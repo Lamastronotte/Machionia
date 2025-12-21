@@ -40,7 +40,7 @@ TAKE INSPIRATION OF
 #ifndef GRIDD_HPP
 #define GRIDD_HPP
 
-#include "config.hpp"
+#include "config.hpp"aaa
 #include "textures.hpp"
 
 #include <raylib.h>

@@ -1,6 +1,9 @@
 #pragma once
 #include "config.hpp"
+<<<<<<< HEAD
 #include "map.hpp"
+=======
+>>>>>>> 84eabab4631653ac751af224845619a3c44157b2
 
 namespace Entity
 {
@@ -16,6 +19,7 @@ namespace Entity
   };
 
   extern std::map<int, std::string> TypeToTexture;
+<<<<<<< HEAD
 
   class RessourceNode: public Entity, public Collider
   {
@@ -40,5 +44,17 @@ namespace Entity
     {
 
     }
+=======
+  
+
+  class RessourceNode: public Entity, public Collider
+  {
+    public:
+
+      virtual void Draw(); // draw the right sprite
+      virtual void Update(float dt); // maybe animation
+
+      Type GetType();
+>>>>>>> 84eabab4631653ac751af224845619a3c44157b2
   };
 };

@@ -23,7 +23,11 @@ namespace Entity
     if(!m_is_active)
       return;
 
+<<<<<<< HEAD
     float ypos = (float)screenHeight * 4/5;
+=======
+    float ypos = screenHeight * 4/5;
+>>>>>>> 84eabab4631653ac751af224845619a3c44157b2
     bool result = GuiWindowBox({0.0f, ypos, (float)screenWidth, screenHeight - ypos}, "Menu");
   }
 
@@ -61,11 +65,19 @@ namespace Entity
           // check if collision between mouse pos in world coords and rectangle collider
           if(CheckCollisionPointRec(mouseWorld, rec))
           {
+<<<<<<< HEAD
             //spdlog::info("hit entity");
           }
           else
           {
             //spdlog::info("missed entity");
+=======
+            spdlog::info("hit entity");
+          }
+          else
+          {
+            spdlog::info("missed entity");
+>>>>>>> 84eabab4631653ac751af224845619a3c44157b2
           }
         }
       }

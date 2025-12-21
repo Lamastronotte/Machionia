@@ -12,7 +12,11 @@ void LoadFromFile(std::vector<std::filesystem::path> *input, std::string file)
     if (fs::is_regular_file(entry))
     {
       fs::path relative_path = fs::relative(entry.path(), ".");
+<<<<<<< HEAD
       //spdlog::info("{}", relative_path.string());
+=======
+      spdlog::info("{}", relative_path.string());
+>>>>>>> 84eabab4631653ac751af224845619a3c44157b2
       input->push_back(relative_path);
     }
   }
