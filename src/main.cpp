@@ -36,6 +36,8 @@ int main()
 
   Global_Assets.Load();
 
+	Local_Player.Load();
+
   Entity::Map mymap;
 
   int map_data[] = {

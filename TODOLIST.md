@@ -28,8 +28,8 @@ on 10th december if you got time implement :
 
 # gameplay features
 
-- on load, ressource nodes spawn on the map
-- currency and ressources
+- on load, ressource nodes spawn on the map DONE
+- currency and ressources ui thing on 23rd december
 - place ressource extractors
 - upgradable ressource extractors
 - waves

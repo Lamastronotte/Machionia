@@ -7,14 +7,6 @@ namespace Entity
 
   // map to a name that maps to a texture
 
-  enum RessourceNodeType
-  {
-    eNULL,
-    eGOLD,
-    eOIL,
-    eMETAL
-  };
-
   extern std::map<int, std::string> TypeToTexture;
 
   class RessourceNode: public Entity, public Collider

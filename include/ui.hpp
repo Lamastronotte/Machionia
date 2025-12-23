@@ -31,6 +31,7 @@ namespace Entity
     std::vector<Entity*> *m_entity_list;
 
     void ShowEntityDetail();
+		void DrawPlayerRessources(Player* plr);
   };
 };
 

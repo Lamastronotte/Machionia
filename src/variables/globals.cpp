@@ -5,6 +5,8 @@ GlobalAssets Global_Assets;
 
 Camera2D* Global_Camera;
 
+Player Local_Player;
+
 float needed_camera_move = 50.f;
 float camera_speed = 450.f;
 

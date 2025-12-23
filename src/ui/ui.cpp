@@ -20,11 +20,13 @@ namespace Entity
 
   void UIManager::Draw() {
     // draw a big square on bottom that is the root of ui (root (other)) + (popups)
-    if(!m_is_active)
+    if (!m_is_active)
       return;
 
-    float ypos = (float)screenHeight * 4/5;
-    bool result = GuiWindowBox({0.0f, ypos, (float)screenWidth, screenHeight - ypos}, "Menu");
+    float ypos = (float)screenHeight * 4 / 5;
+    bool result = GuiWindowBox({ 0.0f, ypos, (float)screenWidth, screenHeight - ypos }, "Menu");
+
+		DrawPlayerRessources(&Local_Player);
   }
 
   void UIManager::OnRegister(std::vector<Entity*> *_entities_list) {m_entity_list = _entities_list;}
@@ -71,5 +73,12 @@ namespace Entity
         }
       }
     }
+  }
+
+  void UIManager::DrawPlayerRessources(Player* plr)
+  {
+    // draw on top right corner
+    // draw from right to left
+    
   }
 }

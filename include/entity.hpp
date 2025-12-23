@@ -1,6 +1,8 @@
 #pragma once
 #include "config.hpp"
 
+extern int resource_node_number;
+
 namespace Entity
 {
   
@@ -13,6 +15,16 @@ namespace Entity
     eCAM,
     eRESSOURCE
   };
+
+  enum RessourceNodeType
+  {
+    eNULL,
+    eGOLD,
+    eOIL,
+    eMETAL
+  };
+
+	
 
 /*
 class for inheritance

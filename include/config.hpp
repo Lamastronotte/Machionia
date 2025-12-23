@@ -29,6 +29,7 @@
 
 #include "assets_loc.hpp"
 #include "entity.hpp"
+#include "player.hpp"
 #include "globals.hpp"
 #include "collider.hpp"
 

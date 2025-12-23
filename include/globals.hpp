@@ -6,10 +6,13 @@
 
 
 class GlobalAssets;
+class Player;
 
 extern GlobalAssets Global_Assets;
 
 extern Camera2D* Global_Camera;
+
+extern Player Local_Player;
 
 // amount of pixels needed for the ca
 extern float needed_camera_move;
