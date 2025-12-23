@@ -30,5 +30,6 @@ class for inheritance
       virtual void OnRegister(std::vector<Entity*> *_entities_list) {}
 
       virtual Type GetType() {return eNIL;}
+      virtual int GetDrawLayer() { return 0; }
   };
 };

@@ -22,6 +22,10 @@
 #include <map>
 #include <iostream> 
 #include <filesystem>
+#include <cmath>
+#include <cstdlib>
+#include <ctime>
+#include <stdlib.h>
 
 #include "assets_loc.hpp"
 #include "entity.hpp"

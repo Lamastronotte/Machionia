@@ -5,12 +5,15 @@
 #include "map.hpp"
 #include "Camera.hpp"
 #include "ui.hpp"
+#include "ressourcenode.hpp"
 
 //----------------------------------------------------------------------------------
 // Program main entry point
 //----------------------------------------------------------------------------------
 int main()
 {
+
+  srand(time(0));
   // spdlog::info("Welcome to spdlog!");
 
   // Initialization
@@ -33,7 +36,7 @@ int main()
 
   Global_Assets.Load();
 
-  Entity::Map myentity;
+  Entity::Map mymap;
 
   int map_data[] = {
     1, 0, 1, 2, 1,
@@ -43,13 +46,18 @@ int main()
     1, 0, 1, 2, 1
   };
 
-  myentity.LoadMap(map_data, "map_debug", 100, 5);
+  mymap.LoadMap(map_data, "map_debug", 100, 5);
+
+  Entity::RessourceNodeManager rnm;
+ 
+	rnm.LoadTextures();
+	rnm.LoadNodes(&mymap, nullptr, 100);
 
   Entity::Camera mycamera;
 
   Entity::UIManager myui;
 
-  Entity::Global_Entities.Register(&myentity)->Register(&mycamera)->Register(&myui);
+  Entity::Global_Entities.Register(&mymap)->Register(&mycamera)->Register(&myui);
 
   // Main game loop
   while (!WindowShouldClose()) // Detect window close button or ESC key
@@ -60,8 +68,9 @@ int main()
       BeginMode2D(*Global_Camera);
         Entity::Global_Entities.Draw();
       EndMode2D();
+    
+			Entity::Global_Entities.DrawUI();
 
-      Entity::Global_Entities.DrawUI();
     EndDrawing();
   }
 

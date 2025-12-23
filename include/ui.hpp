@@ -19,6 +19,8 @@ namespace Entity
     void Update(float dt);
     void OnRegister(std::vector<Entity*> *_entities_list);
     Type GetType();
+    int GetDrawLayer();
+
   private:
     
     bool m_is_active;

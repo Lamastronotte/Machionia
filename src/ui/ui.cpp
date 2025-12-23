@@ -30,6 +30,7 @@ namespace Entity
   void UIManager::OnRegister(std::vector<Entity*> *_entities_list) {m_entity_list = _entities_list;}
 
   Type UIManager::GetType() {return eUI;}
+  int UIManager::GetDrawLayer() { return 100; }
 
   Entity* UIManager::GetEntity(Vector2 pos, bool ismouse) {
     return nullptr;

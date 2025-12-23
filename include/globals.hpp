@@ -64,5 +64,6 @@ namespace Entity
 
   private:
     std::vector<Entity*> m_entities;
+    std::map<int, std::vector<Entity*>> m_layer_draw_map;
   };
 };

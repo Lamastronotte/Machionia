@@ -74,4 +74,5 @@ namespace Entity
   }
 
   Type Map::GetType() {return eMAP;}
+  int Map::GetDrawLayer() { return 1; }
 };

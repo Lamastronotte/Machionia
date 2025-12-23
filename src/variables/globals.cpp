@@ -40,6 +40,7 @@ namespace Entity
   GlobalEntities* GlobalEntities::Register(Entity* _entity)
 {
   m_entities.push_back(_entity);
+	m_layer_draw_map[_entity->GetDrawLayer()].push_back(_entity);
   _entity->OnRegister(&m_entities);
   return this;
 }
@@ -48,10 +49,13 @@ void GlobalEntities::Draw()
 {
   ClearBackground(BLACK);
 
-  for (auto& e : m_entities)
+  for (auto& [layer, bucket] : m_layer_draw_map)
   {
-    if(e->GetType() != Type::eUI)
-    e->Draw();
+    for (Entity* e : bucket)
+    {
+      if (e->GetType() != Type::eUI)
+        e->Draw();
+    }
   }
 }
 
@@ -59,8 +63,10 @@ void GlobalEntities::DrawUI()
 {
   for (auto& e : m_entities)
   {
-    if(e->GetType() == Type::eUI)
-    e->Draw();
+    if (e->GetType() == Type::eUI)
+    {
+      e->Draw();
+    }
   }
 }
 
