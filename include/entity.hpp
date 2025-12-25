@@ -24,6 +24,9 @@ namespace Entity
     eMETAL
   };
 
+
+  extern std::vector<std::string> RessourceTypeName; //
+	void LoadRessourceTypeName();
 	
 
 /*

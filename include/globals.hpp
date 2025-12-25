@@ -2,6 +2,8 @@
 
 #include "config.hpp"
 
+#include "lang.hpp"
+
 // global variables here with extern but defined in globals.cpp
 
 
@@ -13,6 +15,8 @@ extern GlobalAssets Global_Assets;
 extern Camera2D* Global_Camera;
 
 extern Player Local_Player;
+
+extern Lang::LangSystem Global_Lang;
 
 // amount of pixels needed for the ca
 extern float needed_camera_move;
@@ -70,3 +74,5 @@ namespace Entity
     std::map<int, std::vector<Entity*>> m_layer_draw_map;
   };
 };
+
+// lang system

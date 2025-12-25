@@ -80,5 +80,23 @@ namespace Entity
     // draw on top right corner
     // draw from right to left
     
+    // use a for loop with the function bellow
+    
+    for(int i = 1; i <= 3; i++)
+    {
+      float ressource_amount = plr->GetLocalRessource(i);
+      std::ostringstream ressource_text;
+      ressource_text << Global_Lang.get(RessourceTypeName.at(i)) << std::to_string(i) << ": " << std::setprecision(1) << ressource_amount;
+      DrawText(ressource_text.str().c_str(), screenWidth - 200 - i * 150, 20, 20, WHITE);
+		}
+		//DrawText(Global_Lang.get("ressource.name.gold").c_str(), screenWidth - 200 - 4 * 150, 20, 20, WHITE);
+    /*
+
+        void DrawText(const char *text, int posX, int posY, int fontSize, Color color);       // Draw text (using default font)
+    void DrawTextEx(Font font, const char *text, Vector2 position, float fontSize, float spacing, Color tint); // Draw text using font and additional parameters
+    void DrawTextPro(Font font, const char *text, Vector2 position, Vector2 origin, float rotation, float fontSize, float spacing, Color tint); // Draw text using Font and pro parameters (rotation)
+    void DrawTextCodepoint(Font font, int codepoint, Vector2 position, float fontSize, Color tint); // Draw one character (codepoint)
+    void DrawTextCodepoints(Font font, const int *codepoints, int codepointCount, Vector2 position, float fontSize, float spacing, Color tint); // Draw multiple character (codepoint)
+    */
   }
 }

@@ -7,6 +7,8 @@ Camera2D* Global_Camera;
 
 Player Local_Player;
 
+Lang::LangSystem Global_Lang;
+
 float needed_camera_move = 50.f;
 float camera_speed = 450.f;
 

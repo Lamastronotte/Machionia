@@ -27,6 +27,8 @@ int main()
 
   SetTargetFPS(60); // Set our game to run at 60 frames-per-second
   
+  Global_Lang.load("en_us", "en_us");
+
   Camera2D default_camera = {0};
   default_camera.target = {0, 0};
   default_camera.offset = {0, 0};//{(float)screenWidth / 2.f, (float)screenHeight / 2.f};
@@ -54,6 +56,7 @@ int main()
  
 	rnm.LoadTextures();
 	rnm.LoadNodes(&mymap, nullptr, 100);
+  Entity::LoadRessourceTypeName();
 
   Entity::Camera mycamera;
 

@@ -3,6 +3,7 @@
 // all of the includes of libraries
 // stuff like asset loc and hardcoded values that DOESN'T CHANGE
 
+// external libraries
 #include "raylib.h"
 #include "rlgl.h"
 
@@ -16,17 +17,24 @@
 
 // #include "enet/enet.h"
 
+#include <nlohmann/json.hpp>
+
+// standard libraries 
 #include <array>
 #include <vector>
 #include <string>
 #include <map>
 #include <iostream> 
 #include <filesystem>
+#include <fstream>
+#include <unordered_map>
 #include <cmath>
 #include <cstdlib>
 #include <ctime>
 #include <stdlib.h>
+#include <iomanip>
 
+// my includes
 #include "assets_loc.hpp"
 #include "entity.hpp"
 #include "player.hpp"
